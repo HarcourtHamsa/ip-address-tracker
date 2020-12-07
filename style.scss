@@ -1,0 +1,110 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+}
+
+* {
+  font-family: "Rubik", sans-serif;
+  box-sizing: border-box;
+}
+
+#hero {
+  height: 40vh;
+  background: url("/images/pattern-bg.jpg") no-repeat center;
+  background-size: cover;
+  text-align: center;
+  padding-top: 1rem;
+
+  h1 {
+    margin-top: 0;
+    color: white;
+  }
+
+  form {
+    display: flex;
+    justify-content: center;
+
+    #userInput,
+    button {
+      padding: 1rem;
+      border: none;
+    }
+
+    #userInput {
+      width: 30vw;
+      overflow: hidden;
+    }
+
+    button {
+      background-color: black;
+    }
+  }
+}
+
+section {
+  width: 70vw;
+  margin: 0 auto;
+  position: relative;
+  transform: translate(0, -50%);
+  height: 30vh;
+  border-radius: 5px;
+  background-color: white;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  p {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: smaller;
+    font-weight: 600;
+    color: gray;
+  }
+
+  div {
+    padding: 0 2rem;
+    border-right: 1px solid gray;
+  }
+
+  div:last-child {
+    border-right: 0;
+  }
+}
+
+main {
+  height: 60vh;
+  margin-top: -30vh;
+}
+
+// The designs were created to the following widths: Mobile: 375px
+
+@media only screen and (max-width: 1020px) {
+  html,
+  body {
+    font-size: smaller;
+  }
+
+  main {
+    margin-top: -50vh;
+  }
+  #userInput {
+    width: 80% !important;
+  }
+
+  section {
+    justify-content: space-around;
+    height: auto !important;
+    width: 90%;
+    flex-direction: column;
+    text-align: center;
+    z-index: 1000000;
+
+    div {
+      border: 0;
+    }
+  }
+}
